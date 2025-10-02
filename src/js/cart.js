@@ -35,7 +35,7 @@ function cartItemTemplate(item) {
 
 function removeProductFromCart(productId) {
   let cartItems = getLocalStorage("so-cart") || [];
-  cartItems = cartItems.filter(item => item.Id !== productId);
+  cartItems = cartItems.filter((item) => item.Id !== productId);
   setLocalStorage("so-cart", cartItems);
   renderCartContents(); // Re-render the cart after removing
 }

@@ -247,7 +247,9 @@ button {
   color: white;
   background-color: var(--tertiary-color);
   border: none;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
   padding: 6px 10px;
   border-radius: 50%;
   display: inline-flex;
@@ -280,7 +282,9 @@ button {
   border-radius: 4px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   white-space: nowrap;
 }
 
