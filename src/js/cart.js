@@ -4,6 +4,8 @@ import {
   loadHeaderFooter,
 } from "./utils.mjs";
 
+import { cartItemTemplate } from "./ShoppingCart.mjs";
+
 loadHeaderFooter();
 
 function renderCartContents() {
@@ -18,25 +20,6 @@ function renderCartContents() {
       removeProductFromCart(productId);
     });
   });
-}
-
-function cartItemTemplate(item) {
-  const newItem = `<li class="cart-card divider">
-  <a href="#" class="cart-card__image">
-    <img
-      src="${item.Image}"
-      alt="${item.Name}"
-    />
-  </a>
-  <a href="#">
-    <h2 class="card__name">${item.Name}</h2>
-  </a>
-  <p class="cart-card__color">${item.Colors[0].ColorName}</p>
-  <p class="cart-card__price">$${item.FinalPrice}</p>
-  <p><span class="cart-card__remove" data-id="${item.Id}">X</span></p>
-</li>`;
-
-  return newItem;
 }
 
 function removeProductFromCart(productId) {
